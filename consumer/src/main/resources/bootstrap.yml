@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: basic-consumer
+  cloud:
+    servicecomb:
+      discovery:
+        enabled: true
+        address: http://192.168.1.101:30100
+        appName: basic-application
+        serviceName: ${spring.application.name}
+        version: 0.0.1
+        healthCheckInterval: 30
+      config:
+        enabled: false
+        serverAddr: http://192.168.1.101:30110
+        serverType: kie
